@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Foodsupplements</h1>
+
+    <% for foodsupplement in @foodsupplements do %>
+      <%= render '/foodsupplements/foodsupplement', foodsupplement: foodsupplement %>
+    <% end %>
+
+<%= link_to 'New Foodsupplement', new_foodsupplement_path %>

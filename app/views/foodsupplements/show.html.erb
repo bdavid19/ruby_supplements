@@ -1,0 +1,15 @@
+<div class="foodsupplement">
+  <div class="data">
+    <span><a href="<%= foodsupplements_path %>"><<%= foodsupplement.name%> <%= foodsupplement.price %>, <%= foodsupplement.category %>, <%= foodsupplement.rating %>, <%= foodsupplement.articlenum %></a></span>
+  </div>
+</div>
+<ul>
+  <% for foodsupplement  in  @foodsupplement  do %>
+  <li>
+  <%= link_to  "#{foodsupplemt.name} #{foodsupplement.articlenum }",  "/foodsupplements/"+foodsupplement.id.to_s%>
+  </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Edit', edit_foodsupplement_path(@foodsupplement) %> |
+<%= link_to 'Back', foodsupplements_path %>

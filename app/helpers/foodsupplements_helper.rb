@@ -1,0 +1,2 @@
+module FoodsupplementsHelper
+end

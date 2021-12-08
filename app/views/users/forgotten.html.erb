@@ -1,0 +1,13 @@
+<h1>Forgotten password</h1>
+<fieldset>
+  <legend>Please give your email address</legend>
+  <%= form_for @user, url: '/users/send_forgotten', method: :post do |form| %>
+    <div>
+      <%= form.label :email %>
+      <%= form.text_field :email, size: 20 %>
+    </div>
+    <%= form.submit "Send" %>
+  <% end %>
+</fieldset>
+
+<%= link_to "Back", :back %>
